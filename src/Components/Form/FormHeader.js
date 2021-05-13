@@ -5,7 +5,7 @@ function FormHeader(props) {
     console.log(h1);
     return (
         <div>
-              <h1 className="text-3xl font-medium text-yellow-500 uppercase flex justify-center"{...rest}></h1>
+              <h1 className="text-3xl font-medium text-yellow-500 uppercase flex justify-center"{...rest}>{}</h1>
         </div>
      
     )

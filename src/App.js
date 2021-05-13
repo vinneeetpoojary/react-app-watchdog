@@ -13,6 +13,7 @@ import UserDetailsForm2 from './Pages/UserDeatilsForm2';
 import temp from './Pages/temp';
 import ResidentDetails from './Pages/ResidentDetails';
 import NavbarDropdown from './Components/Navbar/NavbarDropdown';
+
 function App() {
   const [isOpen,setIsOpen]=React.useState(false)
   const toggle=()=>(
@@ -37,10 +38,11 @@ function App() {
     <Route path="/contact" component={Contact}/>
     <Route path="/login"  component={Login}/>
     <Route path="/register"  component={UserSignup}/>
-    <Route path="/resform" component={ResidentDetails}/>
+    <Route path="/resform" exact component={ResidentDetails}/>
     <Route path="/visform" component={VisitorDetailForm}/>
     <Route path="/indexres" component={UserDetailsForm2}/>
     <Route path="/temp" component={temp}></Route>
+   
    </Switch>
    <Footer/>
   </main>
