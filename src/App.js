@@ -1,7 +1,7 @@
 import './App.css';
 import * as React from "react";
 import {BrowserRouter as Router,Route,Switch} from 'react-router-dom';
-import Navbar from './Components/Navbar';
+import Navbar from './Components/Navbar/Navbar';
 import Footer from './Components/Footer';
 import Home from './Pages/Home';
 import About from './Pages/About';
@@ -12,7 +12,7 @@ import VisitorDetailForm from './Pages/VisitorDetailForm';
 import UserDetailsForm2 from './Pages/UserDeatilsForm2';
 import temp from './Pages/temp';
 import ResidentDetails from './Pages/ResidentDetails';
-import NavbarDropdown from './Components/NavbarDropdown';
+import NavbarDropdown from './Components/Navbar/NavbarDropdown';
 function App() {
   const [isOpen,setIsOpen]=React.useState(false)
   const toggle=()=>(

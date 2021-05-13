@@ -20,7 +20,7 @@ const onSubmit =values=>{
 }
 const validationSchema = Yup.object({
     
-    firstName:Yup.string().required("First Name Required"),
+   " fullName.firstName":Yup.string().required("First Name Required"),
     secondName:Yup.string().required("Second Name Required"),
     email:Yup.string().email("Invalid Email").required("Email ID Required"),
     contact:Yup.number().typeError("Invalid Contact Number ").required("Contact Number Required"),
@@ -84,7 +84,9 @@ function ResidentDetails() {
         <Formik initialValues={initialValues} validationSchema={validationSchema} onSubmit={values=>onSubmit}>
         <div className="h-screen">
         <div className="mt-10 flex  justify-center items-center  sm:mx-auto sm:max-w-md sm:w-full py-6 px-4 shadow rounded-xl sm:px-6">
-        <Form >
+            {
+                formik =>{
+                    <Form >
         { formStep===0 && <section>
      <h1 className="text-3xl font-medium text-yellow-500 uppercase flex justify-center">Personal Details</h1>
     <div className="grid grid-cols-2 ">
@@ -277,6 +279,9 @@ function ResidentDetails() {
     </div>
     
         </Form>
+                }
+            }
+        
         </div>
         </div>
         </Formik>
