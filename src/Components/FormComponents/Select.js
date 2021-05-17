@@ -6,7 +6,7 @@ function Select(props) {
         <div>
            <label htmlFor={name} className="block text-base font-medium text-gray-700 uppercase mb-2">{label}</label>
            <Field as="select" id={name} name={name}{...rest}
-            className="appearance-none w-full border border-gray-300 px-3 py-2 rounded-lg shadow-sm focus:outline-none focus:border-gray-300 focus:ring-2 focus:ring-gray-300">
+            className="w-full border border-gray-300 px-3 py-2 rounded mt-1 shadow-sm focus:outline-none focus:border-gray-300 focus:ring-2 focus:ring-gray-300">
                {
                    options.map(option =>{
                        return(
