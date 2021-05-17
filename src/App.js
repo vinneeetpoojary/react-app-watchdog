@@ -6,12 +6,6 @@ import Footer from './Components/Footer';
 import Home from './Pages/Home';
 import About from './Pages/About';
 import Contact from './Pages/Contact';
-import Login from './Pages/Login';
-import UserSignup from './Pages/UserSignup';
-import VisitorDetailForm from './Pages/VisitorDetailForm';
-import UserDetailsForm2 from './Pages/UserDeatilsForm2';
-import temp from './Pages/temp';
-import ResidentDetails from './Pages/ResidentDetails';
 import NavbarDropdown from './Components/Navbar/NavbarDropdown';
 
 function App() {
@@ -36,13 +30,6 @@ function App() {
     <Route path="/" exact component={Home}/>
     <Route path="/about" component={About}/>
     <Route path="/contact" component={Contact}/>
-    <Route path="/login"  component={Login}/>
-    <Route path="/register"  component={UserSignup}/>
-    <Route path="/resform" exact component={ResidentDetails}/>
-    <Route path="/visform" component={VisitorDetailForm}/>
-    <Route path="/indexres" component={UserDetailsForm2}/>
-    <Route path="/temp" component={temp}></Route>
-   
    </Switch>
    <Footer/>
   </main>
