@@ -35,7 +35,7 @@ function FormikContainer() {
         address:"",
         roomno:"",
         gender:"",
-        checkBox:[],
+        checkBox:[""],
         date:null
     }
     const validationSchema=Yup.object({
@@ -45,9 +45,10 @@ function FormikContainer() {
         roomno:Yup.string().required("Room Number is Reqired "),
         gender:Yup.string().required("Required"),
         chechBox:Yup.array().required("Required"),
-        date:Yup.date().required("Required").nullable()
+        date:Yup.date().required("Required a date").nullable()
     })
-    const onSubmit=values=>{console.log("form data",values)}
+    const onSubmit=(values)=>{
+        console.log("form data",values)}
     return (
         <div className="h-screen">
             <Formik
@@ -63,9 +64,9 @@ function FormikContainer() {
                         <FormikControl control="input" type="password" label="Enter Password " name="password" placeholder="Enter Password "/>
                         <FormikControl control="textarea" label="Enter Your Address" name="address" placeholder="Enter Your Address "/>
                         <FormikControl control="select" name="roomno" label="select room no " options={dropdownOptions}/>
-                        <FormikControl control="radio" name="gender" label="gender" options={radioOptions}/>
-                        <FormikControl control="checkbox" name="checkBox" label="checkbox" options={checkBoxOptions} />
-                        <FormikControl control="date" name="date" label="pick a date"/>
+                        <FormikControl control="radio" name="gender" label="Select Your gender" options={radioOptions}/>
+                        <FormikControl control="checkbox" name="checkBox" label="Select Checkbox" options={checkBoxOptions} />
+                        <FormikControl control="date" name="date" label="Select a date"/>
                         <div className="grid grid-cols-2"> 
                         <Button variant="primary" type="submit">Login</Button>
                         <Button variant="secondary" type="reset">Reset</Button>
