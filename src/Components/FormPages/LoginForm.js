@@ -2,19 +2,26 @@ import React from 'react';
 import {Formik,Form} from "formik";
 import * as Yup from "yup";
 import FormikControl from '../FormComponents/FormikControl';
-import Button from '../FormComponents/Button';
 
 const initialValues={
     userName:"",
-    password:""
+    password:"",
+    rememberMe:""
 }
 const validationSchema=Yup.object({
     userName:Yup.string().required("Enter Your Username"),
     password:Yup.string().required("Enter Your Password")}
 )
-const onSubmit=values=>{
-    console.log("form data",values)
+const onSubmit=(values,onSubmitProps)=>{
+    //console.log("form data",values);
+    //console.log("submit props",onSubmitProps)    
+    onSubmitProps.setSubmitting(false)
+    onSubmitProps.resetForm()
 }
+const rememberMe=[
+    {key:"Remember me",value:"1"}
+]
+  
 function LoginForm() {
     return (
         <div className="min-h-screen bg-gray-100 flex flex-cols justify-center">
@@ -27,10 +34,12 @@ function LoginForm() {
             initialValues={initialValues}
             validationSchema={validationSchema}
             onSubmit={onSubmit}
-            
+            //validateOnMount
             >
                 {
                     formik=>{
+                       // console.log("form props",formik);
+                       
                         return <Form>
                             <FormikControl 
                             control="input"
@@ -47,26 +56,28 @@ function LoginForm() {
                             placeholder="Enter Your Password"/>
 
                             <div className="flex items-center justify-between">
-                                <div className="flex items-center">
-                               <input type="checkbox" className="h-4 w-4 text-blue-300 rounded"/>
-                               <label htmlFor="" className="ml-2 text-sm text-gray-600">Remember me</label>
-                                </div>
+                               <FormikControl
+                               control="checkbox"
+                               name="rememberMe"
+                               options={rememberMe}
+                               />
                             </div>
-                           
 
-
-                            <Button 
-                            variant="primary"
+                            <div className="flex flex-cols justify-center">
+                            <FormikControl
+                            control="button"
+                            variant={!formik.isValid ||formik.isSubmitting ? "disabled":"primary"}
                             type="submit"
-                            >
-                                Login
-                            </Button>
-                            <Button 
+                            children="Submit"
+                            disabled={!formik.isValid ||formik.isSubmitting}
+                            />
+                            <FormikControl
+                            control="button"
                             variant="secondary"
-                            type="submit"
-                            >
-                                Reset
-                            </Button>
+                            type="reset"
+                            children="Reset"
+                            />
+                            </div>
                         </Form>
                     }
                 }

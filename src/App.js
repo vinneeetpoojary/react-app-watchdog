@@ -8,6 +8,7 @@ import About from './Pages/About';
 import Contact from './Pages/Contact';
 import NavbarDropdown from './Components/Navbar/NavbarDropdown';
 import LoginForm from './Components/FormPages/LoginForm';
+import RegistrationForm from './Components/FormPages/RegistrationForm';
 
 function App() {
   const [isOpen,setIsOpen]=React.useState(false)
@@ -32,6 +33,7 @@ function App() {
     <Route path="/about" component={About}/>
     <Route path="/contact" component={Contact}/>
     <Route path="/login" exact component={LoginForm}/>
+    <Route path="/register" exact component={RegistrationForm}/>
    </Switch>
    <Footer/>
   </main>

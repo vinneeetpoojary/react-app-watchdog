@@ -2,17 +2,7 @@ import React from 'react'
 
 function Button(props) {
     const {variant,...rest}=props;
-    const {click}=props;
-
-    switch (click) {
-        case "disable":
-            return(
-                <button
-                className="py-2 px-4 border rounded bg-yellow-300 text-white focus:outline-none hover:none"  {...rest}/> 
-            )
-            default:
-            break;
-    }
+    
     switch (variant) {
         case "primary":
             return (
@@ -26,6 +16,10 @@ function Button(props) {
                 <button
                     className="py-2 px-4 border rounded bg-gray-500 text-white focus:outline-none focus:ring-2 focus:ring-gray-300 hover:bg-gray-700 focus:ring-offset-2" {...rest}/> 
             )
+        case "disabled":
+                return(
+                    <button className="py-2 px-4 border rounded bg-yellow-500 text-white opacity-50 cursor-not-allowed hover:none  focus:outline-none focus:ring-0" {...rest}/>
+                )
         default:
             return (
                 <button className="py-2 px-4 border rounded focus:outline-none focus:ring-2 focus:ring-gray-300 hover:bg-gray-500 focus:ring-offset-2" {...rest}/>
