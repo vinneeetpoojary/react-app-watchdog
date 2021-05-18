@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 import{Formik,Form} from "formik";
 import * as Yup from "yup";
 import FormikControl from '../FormComponents/FormikControl';
@@ -27,7 +27,9 @@ const onSubmit=(values,onSubmitProps)=>{
     onSubmitProps.resetForm()
 }
 
+
 function RegistrationForm() {
+  
     return (
         <div className="min-h-screen bg-gray-100 flex flex-cols justify-center">
             <div className="max-w-md w-full mx-auto">
