@@ -12,6 +12,7 @@ import RegistrationForm from './Components/FormPages/RegistrationForm';
 import ResidentDetailsForm from './Components/FormPages/ResidentDetailsForm';
 import VisitorDetailsForm from './Components/FormPages/VisitorDetailsForm';
 import SignupForm from './Components/FormPages/SignupForm';
+import BasicTable from './Components/Table/BasicTable';
 
 function App() {
   const [isOpen,setIsOpen]=React.useState(false)
@@ -40,6 +41,7 @@ function App() {
     <Route path="/resform" exact component={ResidentDetailsForm}/>
     <Route path="/visform" exact component={VisitorDetailsForm}/>
     <Route path="/signup" exact component={SignupForm}/>
+    <Route path="/table" exact component={BasicTable}/>
    </Switch>
    <Footer/>
   </main>

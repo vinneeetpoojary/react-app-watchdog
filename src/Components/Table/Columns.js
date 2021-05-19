@@ -1,0 +1,34 @@
+export const COLUMNS =[
+    {
+        Header:"id",
+        accessor:"id"
+    },
+    {
+        Header:"fullName",
+        accessor:"fullName"
+    },
+    {
+        Header:"phoneNo",
+        accessor:"phoneNo"
+    },
+    {
+        Header:"address",
+        accessor:"address"
+    },
+    {
+        Header:"wing",
+        accessor:"wing"
+    },
+    {
+        Header:"roomNo",
+        accessor:"roomNo"
+    },
+    {
+        Header:"timeIn",
+        accessor:"timein"
+    },
+    {
+        Header:"timeOut",
+        accessor:"timeOut"
+    },
+]
