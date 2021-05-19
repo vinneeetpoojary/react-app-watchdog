@@ -1,18 +1,22 @@
 import * as React from 'react';
-import {Formik,Form,FieldArray,Field} from "formik";
+import {Formik,Form,FieldArray} from "formik";
 import * as Yup from "yup";
 import FormikControl from '../FormComponents/FormikControl';
 
 const initialValues={
-    firstName:"",
-    lastName:"",
-    emailId:"",
-    phoneNo:"",
-    wing:"",
-    roomno:"",
-    familyMembers:[""],
+        firstName:"",
+        lastName:"",
+        emailId:"",
+        phoneNo:"",
+        wing:"",
+        roomno:"",
+        familyMembers:[{
+        Name:[""],
+        Contact:[""]
+    }],
     password:"",
     cnfpassword:"",
+    
 }
 const validationSchema=Yup.object({
     firstName:Yup.string().required("First Name is required"),
@@ -29,7 +33,6 @@ const onSubmit=(values,onSubmitProps)=>{
 }
 function ResidentDetailsForm() {
     const [formStep,setFormStep]=React.useState(0);
-
     const WingOptions=[
         {key:"Select Your  Wing", value:""},
         {key:"A",value:"A"},
@@ -173,19 +176,39 @@ function ResidentDetailsForm() {
                                     {
                                         familyMembers.map((familyMembers,index)=>(
                                             <div key={index}>
-                                                <Field name={`familyMembers[${index}]`} 
-                                                className="w-full border border-gray-300 px-3 py-2 rounded-lg shadow-sm focus:outline-none focus:border-gray-300 focus:ring-2 focus:ring-gray-300"
-                                                type="text"/>
+                                                <div className="grid grid-cols-2">
+                                                <FormikControl
+                                                 control="input"
+                                                 type="text"
+                                                 label="Enter Full Name of a Member"
+                                                 placeholder="Enter Contact Number of a Member"
+                                                 name={`familyMembers[${index}].Name`}
+                                                 />
+                                                 <FormikControl
+                                                 control="input"
+                                                 type="text"
+                                                 label="Enter Contact Number of a Member"
+                                                 placeholder="Enter Contact Number of a Member"
+                                                 name={`familyMembers[${index}].Contact`}
+                                                 />
+                                                 </div>
                                                 {
                                                     index > 0 && 
-                                                    <button type="button" onClick={()=>{remove(index)}}
-                                                    className="py-2 px-4 border rounded bg-gray-500 text-white focus:outline-none focus:ring-2 focus:ring-gray-300 hover:bg-gray-700 focus:ring-offset-2"
-                                                   >-</button>
+                                                         <FormikControl
+                                                            control="button"
+                                                            variant="secondary"
+                                                            type="button"
+                                                            children="-"
+                                                            onClick={()=>{remove(index)}}
+                                                            />
                                                 }
-                                               
-                                                <button type="button" onClick={()=>{push('')}}
-                                                 className="py-2 px-4 border rounded bg-yellow-500 text-white focus:outline-none focus:ring-2 focus:ring-yellow-300 hover:bg-yellow-700 focus:ring-offset-2"
-                                                >Add a Member</button>
+                                                            <FormikControl
+                                                            control="button"
+                                                            variant="primary"
+                                                            type="button"
+                                                            children="Add a Member"
+                                                            onClick={()=>{push('')}}
+                                                            />
                                             </div>
                                         ))
                                     }
@@ -215,6 +238,11 @@ function ResidentDetailsForm() {
                                         placeholder="Confirm Password"
                                         name="cnfpassword"
                                         />
+                                </section>
+                            }
+                            {
+                                formStep ===4 && <section>
+                                   
                                 </section>
                             }
                             <div className="flex flex-cols justify-center mt-4">

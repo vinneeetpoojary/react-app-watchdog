@@ -93,6 +93,13 @@ function Temp() {
                        {
                            formStep===3 && <section>
                                <FormikControl control="radio" name="gender" label="gender" options={radioOptions}/>
+                               <FormikControl
+                                                 control="input"
+                                                 type="text"
+                                                 label="Enter Contact Number of a Member"
+                                                 placeholder="Enter Contact Number of a Member"
+                                                 name={`familyMembers[${index}].Contact`}
+                                                 />
                            </section>
                        }
 
@@ -110,3 +117,4 @@ function Temp() {
 }
 
 export default Temp
+ 
