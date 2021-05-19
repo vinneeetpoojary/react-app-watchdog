@@ -18,9 +18,8 @@ function Checkbox(props) {
                                       {...field}
                                        value={option.value}
                                        checked={field.value.includes(option.value)}
-                                       className=""
                                         />
-                                    <label htmlFor={option.key} className=" text-base text-gray-700 checked:bg-yellow-500 box-shadow ">{option.key}</label>
+                                    <label htmlFor={option.key} className="mx-2">{option.key}</label>
                             </React.Fragment>
                         )
                     })

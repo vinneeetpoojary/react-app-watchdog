@@ -4,10 +4,7 @@ function FormHeader(props) {
     const {h1,...rest}=props;
 
     return (
-        <div>
-              <h1 className="text-3xl font-medium text-yellow-500 uppercase flex justify-center"{...rest}>{}</h1>
-        </div>
-     
+              <h1 className="text-center font-medium text-3xl font-bold text-yellow-500 mt-2"{...rest}/>
     )
 }
 

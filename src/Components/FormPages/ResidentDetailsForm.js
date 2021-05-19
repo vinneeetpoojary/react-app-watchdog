@@ -181,7 +181,7 @@ function ResidentDetailsForm() {
                                                  control="input"
                                                  type="text"
                                                  label="Enter Full Name of a Member"
-                                                 placeholder="Enter Contact Number of a Member"
+                                                 placeholder="Enter Full Name of a Member"
                                                  name={`familyMembers[${index}].Name`}
                                                  />
                                                  <FormikControl

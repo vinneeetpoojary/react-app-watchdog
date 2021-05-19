@@ -44,7 +44,7 @@ function Navbar({toggle,isOpen}) {
             </div>
             <div className="pr-8 md:block hidden">
             <Link to="/login" className="p-4">Login</Link>
-            <Link to="/register" className="p-4">Sign Up</Link>
+            <Link to="/signup" className="p-4">Sign Up</Link>
             </div>
        </nav>
     )

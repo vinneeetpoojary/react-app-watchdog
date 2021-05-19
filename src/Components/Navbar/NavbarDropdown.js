@@ -8,7 +8,7 @@ function NavbarDropdown({isOpen,toggle}) {
                 <Link to="/resform" className="p-4">Resident Form</Link>
                 <Link to="/visform" className="p-4">Visitor Form </Link>
                 <Link to="/login" className="p-4">Login</Link>
-            <Link to="/register" className="p-4">Sign Up</Link>
+            <Link to="/signup" className="p-4">Sign Up</Link>
         </div>
     )
 }

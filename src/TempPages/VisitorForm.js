@@ -13,7 +13,7 @@ const initialValues ={
     visitingRoomNo:""
 }
 const onSubmit =values=>{
-    console.log(values)
+    console.log(values);
 }
 const validationSchema = Yup.object({
     
