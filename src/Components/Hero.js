@@ -8,7 +8,7 @@ return(
         </h1>
         <br/>
         <Link to="/register">
-        <span className="py-6 px-10 bg-yellow-500 rounded-full bg-yellow-500 hover:bg-yellow-300 lg:text-lg md:text-base text-sm transtion duration-300 ease-in-out flex flex-col items-center animate-bounce"> 
+        <span className="py-6 px-10 bg-yellow-500 rounded-full hover:bg-yellow-300 lg:text-lg md:text-base text-sm transtion duration-300 ease-in-out flex flex-col items-center animate-bounce"> 
         Register To Your Building
         <svg class="w-4 h-4 "
          fill="none"

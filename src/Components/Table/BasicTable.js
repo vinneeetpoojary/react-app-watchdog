@@ -1,7 +1,8 @@
 import * as React from 'react';
 import {useTable} from "react-table";
 import MOCK_DATA from "./MOCK_DATA.json";
-import {COLUMNS, Columns} from "./Columns";
+import {COLUMNS} from "./Columns";
+
 
 function BasicTable() {
     const columns = React.useMemo(()=>COLUMNS,[])
@@ -20,15 +21,17 @@ function BasicTable() {
     }=tableInstance
 
     return (
-        <table {...getTableProps} className="table w-full px-3 p-3 mx-auto">
-            <thead>
+        <div className="bg-gray-100 flex mt-8">
+            <div npm>
+            <table {...getTableProps}className="w-screen items-center " >
+            <thead className="items-center">
             {headerGroups.map((headerGroups)=>( 
                 <tr {...headerGroups.getHeaderGroupProps}
-                className="table-row px-2 py-2 text-center"
                 >
                     {headerGroups.headers.map((column)=>(
-                         <th {...column.getHeaderProps()}>
+                         <th {...column.getHeaderProps()} className="bg-yellow-300  items-center">
                              {column.render("Header")}
+                             
                          </th>
                     ))}
                 </tr>
@@ -42,7 +45,7 @@ function BasicTable() {
                             <tr {...row.getRowProps()}>
                             {
                                 row.cells.map(cell=>{
-                                return ( <td {...cell.getCellProps()}className="table-cell bg-gray-400 text-center">
+                                return ( <td {...cell.getCellProps()} className="items-center">
                                 {cell.render("Cell")}
                                 </td>)
                             })}
@@ -52,6 +55,8 @@ function BasicTable() {
                 }
             </tbody>
         </table>
+            </div>
+        </div>
     )
 }
 
