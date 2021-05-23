@@ -105,7 +105,7 @@ function ResidentDetailsForm() {
                     formik=>{
                         return <Form>
                              {formStep===0 && <section>
-                                <div className="text-center font-medium text-3xl font-bold text-yellow-300 mt-2">
+                                <div className="text-center text-3xl font-bold text-yellow-300 mt-2">
                                         Resident Personal Details
                                   </div>
                                 <div className="grid grid-cols-2">
@@ -141,7 +141,7 @@ function ResidentDetailsForm() {
                             </section>
                             }{
                                 formStep===1 && <section>
-                                        <div className="text-center font-medium text-3xl font-bold text-yellow-300 mt-2">
+                                        <div className="text-center  text-3xl font-bold text-yellow-300 mt-2">
                                         Resident Room Details
                                         </div>
                                         <FormikControl
@@ -160,7 +160,7 @@ function ResidentDetailsForm() {
                             }
                             {
                                 formStep===2 && <section>
-                                    <div className="text-center font-medium text-3xl font-bold text-yellow-300 mt-2">
+                                    <div className="text-center  text-3xl font-bold text-yellow-300 mt-2">
                                         Resident Family Members Details
                                         </div>
                                         <FieldArray name="familyMembers">
@@ -221,7 +221,7 @@ function ResidentDetailsForm() {
                             }
                             {
                                 formStep ===3 && <section>
-                                        <div className="text-center font-medium text-3xl font-bold text-yellow-300 mt-2">
+                                        <div className="text-center  text-3xl font-bold text-yellow-300 mt-2">
                                        Create Password
                                         </div>
                                         <FormikControl

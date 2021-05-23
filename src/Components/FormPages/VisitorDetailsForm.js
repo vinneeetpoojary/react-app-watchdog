@@ -2,7 +2,6 @@ import * as React from 'react'
 import {Formik,Form} from "formik";
 import * as Yup from "yup"
 import FormikControl from '../FormComponents/FormikControl';
-import FormHeader from '../FormComponents/FormHeader';
 
 const initialValues={
     fullName:"",
@@ -95,7 +94,9 @@ function VisitorDetailsForm() {
     return (
         <div className="h-screen flex flex-cols justify-center bg-gray-100">
             <div className="max-w-md w-full mx-auto">
-                <FormHeader>Visitors Form</FormHeader>
+            <div className="text-center  text-3xl font-bold text-yellow-300 mt-2">
+                Visitors Form
+            </div>
                 <div className="bg-white border border-gray-300 max-w-md w-full mx-auto mt-4 p-8">
                    <Formik
                    initialValues={initialValues}

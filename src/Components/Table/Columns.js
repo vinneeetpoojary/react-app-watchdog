@@ -1,34 +1,36 @@
+//import {format} from "date-fns"
 export const COLUMNS =[
     {
-        Header:"id",
+        Header:"Id",
         accessor:"id"
     },
     {
-        Header:"fullName",
+        Header:"FullName",
         accessor:"fullName"
     },
     {
-        Header:"phoneNo",
+        Header:"Contact Number",
         accessor:"phoneNo"
     },
     {
-        Header:"address",
+        Header:"Address",
         accessor:"address"
     },
     {
-        Header:"wing",
+        Header:"Wing",
         accessor:"wing"
     },
     {
-        Header:"roomNo",
+        Header:"RoomNo",
         accessor:"roomNo"
     },
     {
-        Header:"timeIn",
-        accessor:"timein"
+        Header:"TimeIn",
+        accessor:"timein",
+       //Cell:(value)=>{return format(new Date(value),"dd/MM/yyyy")}
     },
     {
-        Header:"timeOut",
+        Header:"TimeOut",
         accessor:"timeOut"
     },
 ]

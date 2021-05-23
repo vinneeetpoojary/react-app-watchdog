@@ -10,8 +10,8 @@ import RegistrationForm from './Components/FormPages/RegistrationForm';
 import ResidentDetailsForm from './Components/FormPages/ResidentDetailsForm';
 import VisitorDetailsForm from './Components/FormPages/VisitorDetailsForm';
 import SignupForm from './Components/FormPages/SignupForm';
-import BasicTable from './Components/Table/BasicTable';
 import Navbar from './Components/Navbar/Navbar';
+import FilteringTable from './Components/Table/FilteringTable';
 
 function App() {
  
@@ -28,7 +28,7 @@ function App() {
     <Route path="/resform" exact component={ResidentDetailsForm}/>
     <Route path="/visform" exact component={VisitorDetailsForm}/>
     <Route path="/signup" exact component={SignupForm}/>
-    <Route path="/table" exact component={BasicTable}/>
+    <Route path="/table" exact component={FilteringTable}/>
    </Switch>
    <Footer/>
   </main>

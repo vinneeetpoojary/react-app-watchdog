@@ -42,10 +42,10 @@ function BasicTable() {
                     rows.map(row=>{
                         prepareRow(row)
                         return(
-                            <tr {...row.getRowProps()}>
+                            <tr {...row.getRowProps()} className="hover:bg-gray-300 bg-gray-100">
                             {
                                 row.cells.map(cell=>{
-                                return ( <td {...cell.getCellProps()} className="items-center">
+                                return ( <td {...cell.getCellProps()} className="items-center text-center ">
                                 {cell.render("Cell")}
                                 </td>)
                             })}

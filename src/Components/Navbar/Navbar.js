@@ -9,8 +9,8 @@ function Navbar() {
     }
   
     return (
-        <nav className="bg-gray-300">
-            <div className="w-full px-8 max-auto p-4">
+        <nav className="bg-gray-300 sticky top-0 ">
+            <div className="w-full  max-auto p-4">
 
                 <div className="flex justify-between">
                     <div className="flex space-x-4">
@@ -48,13 +48,13 @@ function Navbar() {
 
                     </div>
                     {/* Mobile menu */}
-                    <div className={showMenu?"md:flex items-center":"hidden"}>
-                        <Link to="./"> <span className="block px-2 py-3 text-gray-700 text-sm  hover:text-gray-900">Home</span></Link>
-                      <Link to="./features"><span className="block px-2 py-3 text-sm text-gray-700 hover:text-gray-900">Features</span></Link>
-                        <Link to="/about"><span className="block px-2 py-3 text-sm text-gray-700 hover:text-gray-900">About Us</span></Link>
-                        <Link to="./contact"> <span className="block px-2 py-3 text-sm text-gray-700 hover:text-gray-900">Contact Us</span></Link>
-                        <Link to="./login"> <span className="block px-2 py-3 text-gray-700 text-sm  hover:text-gray-900">Login</span></Link>
-                        <Link to="./signup"> <span className="block px-2 py-3 text-gray-700 text-sm  hover:text-gray-900">SIgn Up</span></Link>
+                    <div className={showMenu?"md:flex items-center":"hidden" }>
+                        <Link to="./"> <span className="block px-2 py-3 items-centertext-gray-700 text-sm  hover:text-gray-900">Home</span></Link>
+                      <Link to="./features"><span className="block px-2 py-3 items-center text-sm text-gray-700 hover:text-gray-900">Features</span></Link>
+                        <Link to="/about"><span className="block px-2 py-3 items-center text-sm text-gray-700 hover:text-gray-900">About Us</span></Link>
+                        <Link to="./contact"> <span className="block px-2 py-3 items-center text-sm text-gray-700 hover:text-gray-900">Contact Us</span></Link>
+                        <Link to="./login"> <span className="block px-2 py-3 items-center text-gray-700 text-sm  hover:text-gray-900">Login</span></Link>
+                        <Link to="./signup"> <span className="block px-2 py-3 items-center text-gray-700 text-sm  hover:text-gray-900">SIgn Up</span></Link>
                     </div>
             </div>
         </nav>

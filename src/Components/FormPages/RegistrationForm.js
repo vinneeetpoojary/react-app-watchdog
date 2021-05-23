@@ -33,7 +33,7 @@ function RegistrationForm() {
     return (
         <div className="min-h-screen bg-gray-100 flex flex-cols justify-center">
             <div className="max-w-md w-full mx-auto">
-            <div className="text-center font-medium text-3xl font-bold text-yellow-300 mt-2">
+            <div className="text-center text-3xl font-bold text-yellow-300 mt-2">
                     Register Form For Your Building
                 </div>
                 <div className="bg-white border border-gray-300 p-8 max-w-md w-full mx-auto mt-4">
