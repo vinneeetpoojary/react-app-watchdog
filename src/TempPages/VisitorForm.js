@@ -17,7 +17,7 @@ const onSubmit =values=>{
 }
 const validationSchema = Yup.object({
     
-    visitorsName.firstName:Yup.string().required("First Name Required"),
+    firstName:Yup.string().required("First Name Required"),
     secondName:Yup.string().required("Second Name Required"),
     email:Yup.string().email("Invalid Email").required("Email ID Required"),
     contact:Yup.number().typeError("Invalid Contact Number ").required("Contact Number Required"),

@@ -200,7 +200,8 @@ function VisitorDetailForm() {
     }
     {
         formStep===3 && <section>
-             <h1 className="text-3xl font-medium text-yellow-500 uppercase flex justify-center">Visitor Record Created </h1>
+             <h1 className="text-3xl font-medium text-yellow-500 uppercase flex justify-center">Visitor Record Created 
+             </h1>
         </section>
     }
       <div className="flex items-center justify-center">
