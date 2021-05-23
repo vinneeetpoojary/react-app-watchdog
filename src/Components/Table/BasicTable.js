@@ -60,4 +60,4 @@ function BasicTable() {
     )
 }
 
-export default BasicTable
+export default BasicTable;
