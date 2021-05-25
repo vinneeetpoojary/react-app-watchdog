@@ -23,8 +23,11 @@ const validationSchema=Yup.object({
     timeOut:Yup.string().required("Time Out is Required"),
     visitorType:Yup.array().required("Visitor Type is Required"),
 })
-const onSubmit=(values,onSubmitProps)=>{
-    console.log("Form values",values)
+const onSubmit=(value,e)=>{
+    console.log("Form values",value)
+    e=()=>{
+        e.preventdefault()
+    }
 }
 const WingOptions=[
     {key:"Select Your  Wing", value:""},
@@ -59,7 +62,7 @@ function VisitorDetailsForm() {
             return <FormikControl
                     control="button"
                     variant={"primary"}
-                    type="Submit"
+                    type="submit"
                     children="Submit"
                    // disabled={!formik.isValid ||formik.isSubmitting}
                     //onClick={Next}
@@ -105,6 +108,7 @@ function VisitorDetailsForm() {
                    >
                        {
                            (formik)=>{
+                               //console.log(formik)
                                 return <Form>
                                     { formStep===0 && <section>
                                         <FormikControl

@@ -1,36 +1,49 @@
 //import {format} from "date-fns"
+
+import ColumnFilter from "./ColumnFilter";
+
 export const COLUMNS =[
     {
         Header:"Id",
-        accessor:"id"
-    },
+        accessor:"id",
+        Filter:ColumnFilter,
+        disableFilters:true
+            },
     {
         Header:"FullName",
-        accessor:"fullName"
+        accessor:"fullName",
+        Filter:ColumnFilter
+       
     },
     {
         Header:"Contact Number",
-        accessor:"phoneNo"
+        accessor:"phoneNo",
+        Filter:ColumnFilter
     },
     {
         Header:"Address",
-        accessor:"address"
+        accessor:"address",
+        Filter:ColumnFilter
     },
     {
         Header:"Wing",
-        accessor:"wing"
+        accessor:"wing",
+        Filter:ColumnFilter
     },
     {
         Header:"RoomNo",
-        accessor:"roomNo"
+        accessor:"roomNo",
+        Filter:ColumnFilter
     },
     {
         Header:"TimeIn",
         accessor:"timein",
+        Filter:ColumnFilter
        //Cell:(value)=>{return format(new Date(value),"dd/MM/yyyy")}
     },
     {
         Header:"TimeOut",
-        accessor:"timeOut"
+        accessor:"timeOut",
+        Filter:ColumnFilter
     },
 ]

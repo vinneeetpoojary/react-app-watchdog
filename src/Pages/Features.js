@@ -5,9 +5,11 @@ function Features() {
     return (
         <div className="h-screen">
             <div className="flex flex-col ">
-             <Link to="./table1"> Table 1</Link> 
-             <Link to="./table2"> Table 2</Link> 
-             <Link to="./table3"> Table 3</Link> 
+             <Link to="./table1">  Basic Table </Link> 
+             <Link to="./table2"> Filter Table </Link> 
+             <Link to="./table3"> Sorting Table </Link> 
+             <Link to="./resform">Register Form</Link>
+             <Link to="./visform">Visitor Form</Link>
             </div>
         </div>
     )

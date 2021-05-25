@@ -1,5 +1,5 @@
 import * as React from 'react';
-import {useTable,useGlobalFilter} from "react-table";
+import {useTable,useGlobalFilter,useFilters} from "react-table";
 import MOCK_DATA from "./MOCK_DATA.json";
 import {COLUMNS} from "./Columns";
 import GlobalFilter from './GlobalFilter';
@@ -21,10 +21,11 @@ function FilteringTable() {
         columns,
         data
     },
+    useFilters,
     useGlobalFilter)
     const {globalFilter} =state
     return (
-          <div className="flex-col ">
+          <div className="flex-col ju">
                 <GlobalFilter filter={globalFilter} setFilter={setGlobalFilter} className="flex flex-col justify-center" />
             <table {...getTableProps}className="w-screen items-center" >
             <thead className="items-center">
@@ -34,6 +35,9 @@ function FilteringTable() {
                     {headerGroups.headers.map((column)=>(
                          <th {...column.getHeaderProps()} className="bg-yellow-300  items-center p-4 font-xl">
                              {column.render("Header")}
+                             <div>
+                                 { column.canFilter? column.render("Filter"):null}
+                             </div>
                          </th>
                     ))}
                 </tr>

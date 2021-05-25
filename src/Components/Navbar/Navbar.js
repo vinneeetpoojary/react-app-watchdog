@@ -5,11 +5,11 @@ function Navbar() {
     const [showMenu,setShowMenu]=React.useState(false);
     const toggle=()=>{
         setShowMenu(!showMenu);
-        console.log(showMenu)
+        //console.log(showMenu)
     }
   
     return (
-        <nav className="bg-gray-300 sticky top-0 ">
+        <nav className="bg-gray-300">
             <div className="w-full  max-auto p-4">
 
                 <div className="flex justify-between">

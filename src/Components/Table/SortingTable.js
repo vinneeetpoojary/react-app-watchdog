@@ -22,7 +22,7 @@ function SortingTable() {
 
     return (
         <div className="bg-gray-100 flex mt-8">
-            <div npm>
+            <div >
             <table {...getTableProps}className="w-screen items-center " >
             <thead className="items-center">
             {headerGroups.map((headerGroups)=>( 
