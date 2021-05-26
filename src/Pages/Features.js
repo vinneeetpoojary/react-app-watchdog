@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 function Features() {
     return (
         <div className="h-screen">
-            <div className="flex flex-col ">
+            <div className="grid grid-rows-5 justify-center space-y-4">
              <Link to="./table1">  Basic Table </Link> 
              <Link to="./table2"> Filter Table </Link> 
              <Link to="./table3"> Sorting Table </Link> 
